@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Наши коты</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            width: 50px;
+            height: 50px;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <img src="cat.jpg" alt="Котик" class="logo" style="max-width:100px; height:auto;">
+        <h1>Наши коты</h1>
+        <nav>
+            <ul>
+                <li><a href="#link1">Ссылка 1</a></li>
+                <li><a href="#link2">Ссылка 2</a></li>
+                <li><a href="#link3">Ссылка 3</a></li>
+                <li><a href="#link4">Ссылка 4</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h2>Наши коты</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Возраст</th>
+                <th>Вес (кг)</th>
+                <th>Порода</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd">
+                <td class="yellow">Мурзик</td>
+                <td class="green">3 года</td>
+                <td class="yellow">4.5</td>
+                <td class="green">Персидская</td>
+            </tr>
+            <tr class="even">
+                <td class="green">Симба</td>
+                <td class="yellow">2 года</td>
+                <td class="green">5.0</td>
+                <td class="yellow">Мейн-кун</td>
+            </tr>
+            <tr class="odd">
+                <td class="yellow">Луна</td>
+                <td class="green">1 год</td>
+                <td class="yellow">3.2</td>
+                <td class="green">Сиамская</td>
+            </tr>
+            <tr class="even">
+                <td class="green">Барсик</td>
+                <td class="yellow" colspan="2">4 года</td>
+                <td class="green">British Shorthair</td>
+            </tr>
+            <tr class="odd">
+                <td class="yellow">Том</td>
+                <td class="green">5 лет</td>
+                <td class="yellow">6.0</td>
+                <td class="green">Русская голубая</td>
+            </tr>
+            <tr class="even">
+                <td class="green">Котя</td>
+                <td class="yellow">6 лет</td>
+                <td class="green">3.5</td>
+                <td class="yellow">Абиссинская</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2023 Котики. Все права защищены.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+        }
+        header, nav, main, footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        td, th {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /* Mobile First Styles */
+        @media (max-width: 600px) {
+            header, nav, main, footer {
+                flex-direction: column;
+            }
+            main {
+                order: 1; /* Перемещение таблицы выше списка на смартфонах */
+            }
+            nav {
+                order: 2; /* Список ссылок следует ниже таблицы */
+            }
+        }
+
+        /* Styles for Tablets and Desktops */
+        @media (min-width: 601px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+            }
+            li {
+                margin: 0 10px;
+            }
+            main {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Страница с Гиперссылками</title>
+</head>
+<body>
+    <h1>Список гиперссылок</h1>
+    <ul>
+        <li><a href="http://kubsu.ru">Главная страница kubsu.ru</a></li>
+        <li><a href="https://kubsu.ru">Главная страница kubsu.ru (HTTPS)</a></li>
+        <li><a href="https://example.com/image.jpg"><img src="https://example.com/image.jpg" alt="Описание изображения"></a></li>
+        <li><a href="/about">Сокращенная ссылка на внутреннюю страницу</a></li>
+        <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+        <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href="https://example.com?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
+        <li><a href="https://example.com?id=123">Ссылка с параметром id в URL</a></li>
+        <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li><a href="../page.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../page.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+        <li><p>Контекстная <a href="https://example.com">ссылка в тексте абзаца</a>.</p></li>
+        <li><a href="https://www.example.com#section">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <li>
+            <map name="image-map">
+                <area shape="rect" coords="34,44,270,350" href="https://example.com/rect-link" alt="Прямоугольная ссылка">
+                <area shape="circle" coords="337,300,44" href="https://example.com/circle-link" alt="Круглая ссылка">
+            </map>
+            <img src="image.jpg" usemap="#image-map" alt="Ссылка на область изображения">
+        </li>
+        <li><a href="#">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+        <li><a href="https://example.com" rel="noindex">Запрещенная для индексации поисковиками ссылка</a></li>
+        <li>
+            <ol>
+                <li><a href="https://example.com" title="Первая ссылка">Первая ссылка</a></li>
+                <li><a href="https://example.com" title="Вторая ссылка">Вторая ссылка</a></li>
+            </ol>
+        </li>
+        <li><a href="ftp://username:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Форма</title>
+  </head>
+
+  <body>
+
+    <h1>Форма</h1>
+
+    <form action="/"
+      method="POST">
+
+      <label>
+        ФИО:<br />
+        <input name="field-name-1"
+          value="Иванов Иван Иванович" />
+      </label><br />
+
+      <label>
+        Телефон:<br />
+        <input name="field-tel"
+          type="tel"
+          placeholder="Введите ваш телефон" />
+      </label><br />
+
+      <label>
+         email:<br />
+        <input name="field-email"
+          type="email"
+	  placeholder="Введите ваш email" />
+      </label><br />
+
+      <label>
+         Дата:<br />
+        <input name="field-date"
+	  value="2024-09-11"
+          type="date" />
+      </label><br />
+
+	Ваш пол:<br />
+      <label><input type="radio" checked="checked"
+        name="radio-group-1" value="Значение1" />
+        Женский</label>
+      <label><input type="radio"
+        name="radio-group-1" value="Значение2" />
+        Мужской</label><br />
+
+	<label>
+        Выберете ваш любимый язык програмироавния:
+        <br />
+        <select name="field-name-4[]"
+          multiple="multiple">
+          <option value="Значение1">Pascal</option>
+          <option value="Значение2" selected="selected">C</option>
+          <option value="Значение3" selected="selected">C++</option>
+	  <option value="Значение4" selected="selected">JavaScript</option>
+	  <option value="Значение5" selected="selected">PHP</option>
+	  <option value="Значение6" selected="selected">Python</option>
+	  <option value="Значение7" selected="selected">Java Haskel</option>
+	  <option value="Значение8" selected="selected">Prolog</option>
+	  <option value="Значение9" selected="selected">Scala</option>
+        </select>
+      </label><br />
+
+      <label>
+        Напишите краткую биоргафию:<br />
+        <textarea name="field-name-2"></textarea>
+      </label><br />
+
+	Подтвердите:<br />
+      <label><input type="checkbox" checked="checked"
+        name="check-1" />
+        с контактом ознакомлен</label><br />
+
+      Кнопка сохранения формы:
+      <input type="submit" value="Сохранить" />
+    </form>
+
+  </body>
+
+</html> 
